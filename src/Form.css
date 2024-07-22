@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a3b18a; /* Lightest color */
+    color: #344e41; /* Darkest color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #344e41; /* Darkest color */
+    margin-bottom: 20px;
+  }
+  
+  /* Container with flexbox for side-by-side layout */
+  .container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 1200px; /* Increased max-width for more space */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Flexbox container for side-by-side content */
+  .content {
+    display: flex;
+    gap: 30px; /* Gap between table and form */
+  }
+  
+  /* Table container with shadow effect */
+  .table-container,
+  .form-container {
+    background-color: #e9ecef;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+  }
+  
+  /* Hover effect for containers */
+  .table-container:hover,
+  .form-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    transition: transform 0.3s ease; /* Smooth transition for table transform */
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+    background-color: #f1f3f5; /* Slightly different color for row hover */
+  }
+  
+  /* Padding and font styling for table cells */
+  td {
+    padding: 12px;
+    vertical-align: top;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  td:first-child {
+    font-weight: bold;
+    color: #344e41; /* Darkest color */
+  }
+  
+  td:last-child {
+    text-align: left; /* Align text to the left for better readability */
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: opacity 0.3s ease; /* Smooth transition for form opacity */
+  }
+  
+  /* Hover effect for form labels */
+  form label {
+    transition: color 0.3s ease; /* Smooth transition for label color */
+  }
+  
+  form label:hover {
+    color: #3a5a40; /* Change color on hover */
+  }
+  
+  /* Gender and checkbox styling */
+  .gender,
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gender label,
+  .checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Input, select, and textarea styling */
+  input,
+  select,
+  textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* Increase font size for better readability */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+  }
+  
+  /* Focus effect for input, select, and textarea */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3a5a40; /* Second darkest color */
+    box-shadow: 0 0 5px rgba(58, 90, 64, 0.5); /* Second darkest color with transparency */
+  }
+  
+  /* Button styling and hover effect */
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a5a40; /* Second darkest color */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scale */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #344e41; /* Darkest color */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  }
+  
+  /* Styles for submission message */
+  .submission-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda; /* Green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Light green border */
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    /* Stack table and form vertically on smaller screens */
+    .content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    td {
+      padding: 8px;
+      font-size: 16px;
+    }
+  }
+  
